@@ -1,0 +1,19 @@
+import java.sql.DriverManager
+
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'idea'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    compile 'mysql:mysql-connector-java:5.1.20'
+    compile 'commons-dbcp:commons-dbcp:1.4'
+    compile 'org.springframework:spring-context:3.2.6.RELESE'
+    runtime 'javax.servlet:jstl:1.1.2'
+}
+
